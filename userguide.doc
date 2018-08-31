@@ -1,0 +1,119 @@
+USER GUIDE - DICOM_MAP_TOOL
+
+USER'S CHARACTERISTICS:
+Who will use the tool ?
+Scientists of ??magnetic resonance field.
+Where users will use the guide ?
+Laboratory or office.
+How user will use the guide ?
+Clicking on help button.
+How much experience users have with the product?
+High experience.
+
+Calculation for T1r or T2r maps.
+
+	Single File :
+
+		There are two methods for loading datas from
+		your computer to software. 
+		The first method is loading dicom's files, 
+		you must to click on the button "LOAD DICOM 
+		T*** Data" will appear a window to select the 
+		folder where is your data, after a list of all 
+		your datas, you must to choose whitch data will
+		be processed. After loaded the file, you must 
+		to click on the button "Go".
+
+		The second method is loading nifti's files, you
+		must to click on the button "Load Nifti" will
+		appear a window to select your file. After loaded
+		the file, you must to click on the button "Go" and
+		put the time sequence.
+
+		For both methods, after the calculation will 
+		apper a window to select where user want to 
+		save the maps (results).
+ 
+	Multiples Files:
+
+		To load multiples files, all of them must to be
+		nifti files. You must to click on the button 
+		"Load Multiples Niftis", will appear a window
+		to select the files. The software will only 
+		calculate the files with T1r and T2r in the name,
+		the rest it will be skip. User must to click on 
+		the button "Go", and after put the time sequence.
+		The maps (results) will be save automatically by 
+		the software with '_map'in the end of the name.
+
+Calculation for MT or RAFF maps.
+
+	Single File :
+
+		There are two methods for loading datas from
+		your computer to software. 
+		The first method is loading dicom's files, 
+		you must to click on the button "LOAD DICOM 
+		T*** Data" will appear a window to select the 
+		folder where is your data, after a list of all 
+		your datas, you must to choose the +Z and -Z RAFFs
+		dataset to be processed. After loaded the files, 
+		you must to click on the button "Go".
+
+		The second method is loading nifti's files, you
+		must to click on the button "Load Nifti" will
+		appear a window to select your RAFF (+Z) dataset,
+		after the RAFF(-Z). 
+		After loaded the file, you must to click on the 
+		button "Go" and put the time sequence.
+
+		For both methods, after the calculation will 
+		apper a window to select where user want to 
+		save the maps (results).
+
+	Multiples Files :
+
+		To load multiples files there are 2 options
+		load files concatenated (+Z + -Z) and 2 files (+Z and -Z)
+		all of them must to be nifti files. 
+		You must to click on the button "Load Multiples Niftis", will appear a window
+		to select the files. For 1 input files concatenated must to have 'raff' or 
+		'RAFF' in the name. For 2 input files the software will separate inversion
+ 		files and non-inversion files from inputs, to join the files in 1. 
+		After it the software need to make the pairs to process them.
+		Example of identification:
+
+		2217A_14s_gre_prep_raff3_inv_tr10_cor.nii
+		2217A_15s_gre_prep_raff3_plu_tr10_cor.nii 
+
+		The software is deleting the identificator of minus and
+		plus and comparing the names, it must be the same. 
+		For plus files, the software will identify this types of string:
+		'plus','plusZ','1plu'.
+		And for minus files this:
+		'minus', 'minuZ', 'minusZ', 'inv','2inv'.
+
+		User must to click on the button "Go", and after put
+		the time sequence.
+		The maps (results) will be save automatically by 
+		the software with '_map'in the end of the name.
+
+Concatenation for RAFF's
+
+	Concatenate 2 files (+Z,-Z) in 1 files (+Z + -Z):
+		The junction is made by the order of input files,
+		to load files they must to be in the same order.
+		First load all the plus files. Second load all the 
+		minus files. It will be join considering the order of input. 
+        	After the calculation output is saving automatically
+ 		in the folder of input, using the same name of the
+		plus files, but with '_conc' in the end of the name.
+		
+	Concatenate Multiples files (2 in 1)
+		Works the same way of multiples files from raff, when
+		you are loading 2 input files.
+
+
+
+
+		
